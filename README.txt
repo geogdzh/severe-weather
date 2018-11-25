@@ -2,4 +2,5 @@
 To set up the necessary directories:
 Copy station_list.txt and the two data retrieval scripts into your desired directory, e.g. severe-weather. While in that directory, run storm_data_retrieval.sh and sounding_data_retrieval.sh . They will create a ./storm_data and ./data directory, respectively.
 Next, move the zip_codes_sates.csv and states.csv files into the ./storm_data directory.
-You are now ready to run with the functionality provivded within analysis.ipynb! (provided you have Jupyter Notebook up and running)
+You are now ready to run with the functionality provivded within combined_dataset.ipynb! (provided you have Jupyter Notebook up and running)
+PS. Jupyter Notebook was used to facilitate the use of large datasets and computationally heavy operations.
