@@ -3,8 +3,10 @@
 #sounding data from UWyo's Upper Air database
 #will download all records from 1973 to 2017 for all stations in station_list.txt for 12Z
 #can be stopped and started, wil re-check for existing files
-#requries ./data folder
+#creates ./data directory
 
+if ! [ -d ./data ]
+then
 var1=$(seq -w 1 12)
 var2=$(seq -w 1 28)
 
@@ -76,3 +78,5 @@ do
 done < $file
 
 echo All done with 31 days
+
+fi

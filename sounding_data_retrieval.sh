@@ -20,7 +20,7 @@ do
 		if [ -f ./data/${line}_${year}_${month}_${day}.txt ]; then
 		    echo ${line}_${year}_${month}_${day}.txt exists!
 		else
-		    curl weather.uwyo.edu/cgi-bin/sounding\?region\=naconf\&TYPE\=TEXT\%3ALIST\&YEAR\=$year\&MONTH\=$month\&FROM\=${day}00\&T0\=${day}00\&STNM\=$line > temp1.txt
+		    curl weather.uwyo.edu/cgi-bin/sounding\?region\=naconf\&TYPE\=TEXT\%3ALIST\&YEAR\=$year\&MONTH\=$month\&FROM\=${day}12\&T0\=${day}12\&STNM\=$line > temp1.txt
 		    sed '/^</ d' temp1.txt > temp2.txt
 		    awk -v m=4 -v n=11 'NR<=m{next};NR>n+m{print line[NR%n]};{line[NR%n]=$0}' temp2.txt > ./data/${line}_${year}_${month}_${day}.txt
 		    rm temp1.txt temp2.txt
